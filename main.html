@@ -10,20 +10,28 @@
 <header>
     <div class="navbar__wrap">
         <img class="logo__img" src="" alt="gugu">
-        <ul>
-            <li><a>DOMŮ</a></li>
-            <li><a>SLUŽBY</a></li>
-            <li><a>REFERENCE</a></li>
-            <li><a href="/o_nas.html">O NÁS</a></li>
-            <li><a href="/kontakt.html">KONTAKT</a></li>
-        </ul>
+        <menu class="nav__menu">
+            <li class="li__domu"><a>DOMŮ</a></li>
+            <li class="li__sluzby"><a>SLUŽBY</a></li>
+            <li class="li__reff"><a>REFERENCE</a></li>
+            <li class="li__onas"><a href="/o_nas.html">O NÁS</a></li>
+            <li class="li__kontakt"><a href="/kontakt.html">KONTAKT</a></li>
+        </menu>
+
         
     </div>
     <div class="cover__wrap">
         <img class="background__cover" src="" alt="">
         <h1 class="h1__cover">HM Building.cz s.r.o.</h1>
         <p>Liberecká stavební společnost</p>
-        <button class="orange__button" type="">pokračovat</button>
+        <div class="orange__button">
+                <select name="cars" id="cars">
+                  <option value="volvo">pokračovat</option>
+                  <option value="saab">gugugaga</option>
+                  <option value="mercedes">Mhmmmmm</option>
+                  <option value="audi">i like turtles</option>
+                </select> 
+        </div>
     </div>
     <div class="services__main">
         <h1 class="h1__oend">Využijte škálu našich služeb</h1>
@@ -69,9 +77,9 @@
         <div class="rest__reff">
             <h1 class="h1__oend">Rádi vám ukážeme naše reference</h1>
             <p>Stojí za námi kvalitně vyhotovené zakázky dle konkrétních požadavků zadavatelů podepřené letitými zkušenostmi ve stavebnictví. To, že obrátit se na právě nás je vhodná volba potvrdí naši klienti, na jejichž stavbách jsme zanechali náš rukopis. Reference jsou jen zlomkem naší práce, za kterou se rozhodně nestydíme.</p>
-            <img class="img__reffgallery" src="" alt="conv">
-            <img class="img__conv" src="" alt="conv">
-            <img class="img__conv" src="" alt="conv">
+            <a href="hasic.html"><img class="img__hasicgal" src="media/reference/reference-hasicska-zbrojnice-600w.jpg" alt="conv"></a>
+            <a href="pradelna.html"><img class="img__pradelnagal" src="media/reference/reference-pradelna-600w.jpg" alt="conv"></a>
+            <a href="venkovni_plochy.html"><img class="img__plochygal" src="media/reference/reference-plocha-600w.jpg" alt="conv"></a>
             <button class="orange__button" type="">více referencí</button>
         </div>
     </div>
@@ -83,7 +91,6 @@
         <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
         <button class="footer__button" type="">Zobrazit více</button>
     </div>
-    <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form -->
 </footer>
 
 </html>

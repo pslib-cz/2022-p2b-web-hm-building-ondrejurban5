@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,69 @@
     <link rel="stylesheet" href="/main.css">
     <title>Kontakt</title>
 </head>
-<header>
-    <div class="navbar__wrap">
-        <img class="logo__img" src="" alt="gugu">
-        <ul>
-            <li><a>DOMŮ</a></li>
-            <li><a>SLUŽBY</a></li>
-            <li><a>REFERENCE</a></li>
-            <li><a href="/o_nas.html">O NÁS</a></li>
-            <li><a href="/kontakt.html">KONTAKT</a></li>
-        </ul>
-        
-    </div>
-    <h1 class="h1__other">Kontaktujte nás</h1>
-    <p>Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</p>
 
-</header>
 <body>
+    <header>
+        <nav class="navbar__wrap">
+            <img class="logo__img" src="" alt="gugu">
+            <menu class="nav__menu">
+                <li class="li__domu"><a>DOMŮ</a></li>
+                <li class="li__sluzby"><a>SLUŽBY</a></li>
+                <li class="li__reff"><a>REFERENCE</a></li>
+                <li class="li__onas"><a href="/o_nas.html">O NÁS</a></li>
+                <li class="li__kontakt"><a href="/kontakt.html">KONTAKT</a></li>
+            </menu>
+
+        </nav>
+        <h1 class="h1__other">Kontaktujte nás</h1>
+        <p>Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</p>
+
+    </header>
+
     <div class="kontakt__wrap">
         <ul>
             <li>+420 775 550 564</li>
             <li>stavby@hm-building.cz</li>
             <li>Křižanská 12, Liberec XXII-Horní Suchá</li>
         </ul>
-        <img class="img__mapa" src="" alt="">
+        <img class="img__mapa" src="media/mapa.jpg" alt="pop">
     </div>
-    
-    
+    <div class="kontakt__formular">
+        <h2 class="h2__formular">Nezávazná poptávka služeb</h2>
+        <p>Plácneme si pro Váš projekt? Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+        <div class="formular__input">
+            <div class="formular__base">
+                <label for="username">Jmeno a přijmení <span aria-label="required">*</span></label>
+                <input id="username" type="text" name="username" />
+                <label for="username">E-mail <span aria-label="required">*</span></label>
+                <input id="username" type="text" name="username" />
+                <label for="username">Telefon <span aria-label="required">*</span></label>
+                <input id="username" type="text" name="username" />
+            </div>
+            <div class="formular__select">
+                <label for="username">Poptávaná služba</label>
+
+                <select name="cars" id="cars">
+                  <option value="volvo">Novostavba</option>
+                  <option value="saab">gugugaga</option>
+                  <option value="mercedes">Mhmmmmm</option>
+                  <option value="audi">i like turtles</option>
+                </select> 
+            </div>
+            <div class="formular__textarea">
+                <label for="username">Poznámky </label>
+
+                <textarea id="username" name="username" rows="4" cols="50">
+                </textarea> 
+            </div>
+            <button class="orange__button" type="">Odeslat nezávaznou poptávku</button>
+        </div>
+
+    </div>
+    <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form -->
 </body>
 <footer>
-    
+
 </footer>
+
 </html>
