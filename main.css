@@ -123,12 +123,12 @@ p {
 .button__center {
     display: flex;
     justify-content: center;
-    margin-bottom: 4em;
 }
 .footer__wrap {
     background-color: var(--color-orange);
     display: block;
     padding: 2em;
+    margin-top: 4em;
 }
 .footer__wrap > p, h3{
     display: flex;
@@ -144,6 +144,45 @@ p {
     gap: 20px;
     border: 2px solid white;
 }
+h2 {
+    font-size: 30px;
+}
+.novostavby__body > p, h2 {
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: center;
+}
+.novostavby__body > ul {
+    list-style: none;
+
+}
+.novostavby__body >ul li::before {
+    content: "\2022";
+    color:var(--color-orange);
+    font-weight: bold;
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: 2em;
+}
+
+.cover__wrap >ul {
+    list-style-type: none;
+
+}
+.cover__wrap >ul li::before {
+    content: "\2022";
+    color:var(--color-orange);
+    font-weight: bold;
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: 2em;
+}
+.odsazene__li {
+    margin-left: 2em;
+}
+
+
+
 
 
 
