@@ -11,25 +11,38 @@
 </head>
 
 <body>
-    <header>
-        <div class="navbar__wrap">
-            <menu class="nav__menu">
-                <li class="li__domu"><a href="main.html">DOMŮ</a></li>
-                <li class="li__sluzby"><a href="#sluzby">SLUŽBY</a></li>
-                <li class="li__reff"><a href="#reffe">REFERENCE</a></li>
-                <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
-                <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
-            </menu>
+    <header class="header">
+        <div class="navbar__center">
+            <div class="navbar__wrap">
+                <img class="img-responsive" src="media/logo.png" alt="neco">
+                <menu class="nav__menu hamburger-menu hamburger-menu--hidden">
+                    <li class="li__domu"><a href="main.html">DOMŮ</a></li>
+                    <li class="li__sluzby"><a href="#sluzby">SLUŽBY</a></li>
+                    <li class="li__reff"><a href="#reffe">REFERENCE</a></li>
+                    <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
+                    <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
+                </menu>
+                <a class="hamburger" href="javascript:void(0)">menu</a>
+            </div>
         </div>
-        <div class="cover__wrap">
-            <picture>
-                <img class="background__cover" src="media/pageheader-1920w.jpg" alt="">
-            </picture>
-            <h1 class="h1__cover">HM Building.cz s.r.o.</h1>
-            <p>Liberecká stavební společnost</p>
-            <a href="#sluzby"><button class="orange__buttonA" type="">pokračovat v</button></a>
+        <div class="cover__wrap--main">
+            <h1 class="h1__cover">HM Building.cz s.r.o.
+                <br>
+            <span>Liberecká stavební společnost</span></h1>
+            <a class="orange__buttonA orange-buttonA--hidden button" href="#sluzby">pokračovat v</a>
         </div>
     </header>
+    <script>
+        const hamburgerButtons = document.querySelectorAll(".hamburger");
+        for (const btn of hamburgerButtons) {
+            btn.onclick = (event) => {
+                const menus = document.querySelectorAll(".hamburger-menu");
+                for (const menu of menus) {
+                    menu.classList.toggle("hamburger-menu--hidden");
+                }
+            }
+        }
+    </script>
 
 
     <div class="services__wrap">
@@ -40,67 +53,82 @@
                 jen hrubou stavbu. Nejsou nám cizí ani rekonstrukce budov a jejich údržba a to včetně okolních ploch.
             </p>
         </div>
-        <div class="services__new">
-            <img class="img__slu" src="media/sluzba-novostavby-1200w.jpg" alt="um">
-            <h2>NOVOSTAVBY</h2>
-            <p>Dle požadavků investora jsme schopní dodat kompletní stavbu na klíč, případně zhotovit ucelenou část.
-                Jsme schopni zajistit také projektovou dokumentaci.
+            <div class="services__new">
+                <img class="img__slu" src="media/sluzba-novostavby-1200w.jpg" alt="um">
+                <div class="grid__unite">
+                    <h2>NOVOSTAVBY</h2>
+                    <p>Dle požadavků investora jsme schopní dodat kompletní stavbu na klíč, případně zhotovit ucelenou část.
+                        Jsme schopni zajistit také projektovou dokumentaci.
 
-                Provádíme stavby jak průmyslového typu, tak rodinné stavby.</p>
-            <button class="white__button" type="">Zobrazit více</button>
-        </div>
+                        Provádíme stavby jak průmyslového typu, tak rodinné stavby.</p>
+                    <button class="white__button button" type="">Zobrazit více</button>
+                </div>
+            </div>
         <div class="services__industrial">
             <img class="img__slu " src="media/sluzba-prumyslove-stavby-1920w.jpg" alt="m">
-            <h2>PRŮMYSLOVÉ STAVBY</h2>
-            <p>Realizujeme průmyslové objekty ocelové konstrukce, lehké ocelové (stanového typu), z prefabrikovaných
-                dílců atd. Vzhledem k tomu, že vlastníme dostatek vlastní mechanizace, stáváme se nezávislými na
-                ostatních subdodávkách a tím se dostáváme na přijatelné ceny.</p>
-            <button class="white__button" type="">Zobrazit více</button>
+            <div class="grid__unite">  
+                <h2>PRŮMYSLOVÉ STAVBY</h2>
+                <p>Realizujeme průmyslové objekty ocelové konstrukce, lehké ocelové (stanového typu), z prefabrikovaných
+                    dílců atd. Vzhledem k tomu, že vlastníme dostatek vlastní mechanizace, stáváme se nezávislými na
+                    ostatních subdodávkách a tím se dostáváme na přijatelné ceny.</p>
+                <button class="white__button button" type="">Zobrazit více</button>
+            </div>
         </div>
         <div class="services__reconstruction">
             <img class="img__slu" src="media/sluzba-rekonstrukce-1920w.jpg" alt="bah">
-            <h2>REKONSTRUKCE DOMŮ A JINÝCH STAVEB</h2>
-            <p>Provádíme veškeré práce spojené s rekonstrukcí stávajících objektů. Pro naše klienty zajišťujeme
-                dodatečné izolování objektů, zateplení objektů, změnu vnitřních i vnějších dispozic stávajících objektů
-                a demolice stávajících staveb. </p>
-            <button class="white__button" type="">Zobrazit více</button>
+            <div class="grid__unite">  
+                <h2>REKONSTRUKCE DOMŮ A JINÝCH STAVEB</h2>
+                <p>Provádíme veškeré práce spojené s rekonstrukcí stávajících objektů. Pro naše klienty zajišťujeme
+                    dodatečné izolování objektů, zateplení objektů, změnu vnitřních i vnějších dispozic stávajících objektů
+                    a demolice stávajících staveb. </p>
+                <button class="white__button button" type="">Zobrazit více</button>
+            </div> 
         </div>
         <div class="services__communication">
             <img class="img__slu" src="media/sluzba-komunikace-a-zpevnene-plochy-1200w.jpg" alt="s">
-            <h2>KOMUNIKACE A ZPEVNĚNÉ PLOCHY</h2>
-            <p>Komunikace a zpevněné plochy provádíme včetně zemních prací, konstrukcí podkladních a souvisejících
-                objektů, jako jsou odvodnění, zpevnění svahů, opěrné zdi atd.</p>
-            <button class="white__button" type="">Zobrazit více</button>
+            <div class="grid__unite">
+                <h2>KOMUNIKACE A ZPEVNĚNÉ PLOCHY</h2>
+                <p>Komunikace a zpevněné plochy provádíme včetně zemních prací, konstrukcí podkladních a souvisejících
+                    objektů, jako jsou odvodnění, zpevnění svahů, opěrné zdi atd.</p>
+                <button class="white__button button" type="">Zobrazit více</button>
+            </div>
         </div>
     </div>
     <div class="rest__wrap">
         <div class="rest__convince">
-            <img class="img__conv" src="media/background-CTAblock-4460w.jpg" alt="conv">
-            <div class="rest__convinceM">
+            <img src="media/background-CTAblock-4460w.jpg" alt="conv">
+            <div class="rest__text">
                 <p>Naše firma nabízí své služby ve stavebnictví od roku 2015. Za kvalitu naší práce ručíme.</p>
-                <button class="orange__button" type="">Přesvědčit se</button>
+                <button class="orange__button button" type="">Přesvědčit se</button>
             </div>
         </div>
-        <div class="rest__reff">
             <h1 class="h1__oend" id="#reffe">Rádi vám ukážeme naše <span>reference</span></h1>
             <p>Stojí za námi kvalitně vyhotovené zakázky dle konkrétních požadavků zadavatelů podepřené letitými
                 zkušenostmi ve stavebnictví. To, že obrátit se na právě nás je vhodná volba potvrdí naši klienti, na
                 jejichž stavbách jsme zanechali náš rukopis. Reference jsou jen zlomkem naší práce, za kterou se
                 rozhodně nestydíme.</p>
-            <a href="hasic.html"><img class="img__slu" src="media/reference/reference-hasicska-zbrojnice-600w.jpg"
-                    alt="conv"></a>
-            <h2 class="h1__22px">Hasičská zbrojnice</h2>
-            <p>celková rekonstrukce</p>
-            <a href="pradelna.html"><img class="img__slu" src="media/reference/reference-pradelna-600w.jpg"
-                    alt="conv"></a>
-            <h2 class="h1__22px">Samoobslužná prádelna</h2>
-            <p>stavební úpravy a opravy</p>        
-            <a href="venkovni_plochy.html"><img class="img__slu" src="media/reference/reference-plocha-600w.jpg"
-                    alt="conv"></a>
-            <h2 class="h1__22px">Venkovní plochy Restyl</h2>
-            <p>provedení venkovnách ploch</p>
+        <div class="rest__reff">
+            <div class="hasic">
+                <a href="hasic.html"><img class="img__slu" src="media/reference/reference-hasicska-zbrojnice-600w.jpg"
+                        alt="conv"></a>
+                <h2 class="h1__22px">Hasičská zbrojnice</h2>
+                <p>celková rekonstrukce</p>
+            </div>
+            <div class="pradelna">
+                <a href="pradelna.html"><img class="img__slu" src="media/reference/reference-pradelna-600w.jpg"
+                        alt="conv"></a>
+                <h2 class="h1__22px">Samoobslužná prádelna</h2>
+                <p>stavební úpravy a opravy</p>
+            </div>
+            <div class="venek">      
+                <a href="venkovni_plochy.html"><img class="img__slu" src="media/reference/reference-plocha-600w.jpg"
+                        alt="conv"></a>
+                <h2 class="h1__22px">Venkovní plochy Restyl</h2>
+                <p>provedení venkovnách ploch</p>
+            </div> 
+             
             <div class="button__center">
-                <button class="orange__button" type="">více referencí</button>
+                <button class="orange__button button" type="">více referencí</button>
             </div>
         </div>
     </div>
@@ -111,7 +139,7 @@
             <h3>Plácneme si pro váš projekt?</h3>
             <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
             <div class="button__center">
-                <button class="footer__button" type="">Nezávazně poptat</button>
+                <button class="footer__button button" type="">Nezávazně poptat</button>
             </div>
         </div>
     </footer>

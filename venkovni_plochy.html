@@ -11,33 +11,41 @@
 </head>
 
 <body>
-    <header>
-        <div class="navbar__wrap">
-            <img class="logo__img" src="" alt="gugu">
-            <menu class="nav__menu">
-                <li class="li__domu"><a href="main.html">DOMŮ</a></li>
-                <li class="li__sluzby"><a href="main.html">SLUŽBY</a></li>
-                <li class="li__reff"><a href="main.html">REFERENCE</a></li>
-                <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
-                <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
-            </menu>
-
-
+    <header class="header">
+        <div class="navbar__center">
+            <div class="navbar__wrap">
+                <img class="img-responsive" src="media/logo.png" alt="neco">
+                <menu class="nav__menu hamburger-menu hamburger-menu--hidden">
+                    <li class="li__domu"><a href="main.html">DOMŮ</a></li>
+                    <li class="li__sluzby"><a href="#sluzby">SLUŽBY</a></li>
+                    <li class="li__reff"><a href="#reffe">REFERENCE</a></li>
+                    <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
+                    <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
+                </menu>
+                <a class="hamburger" href="javascript:void(0)">menu</a>
+            </div>
         </div>
         <div class="cover__wrap">
-            <img class="background__cover" src="" alt="">
-            <p>Liberecká stavební společnost</p>
         </div>
-        <h2>Venkovní plochy Restyl</h2>
-        <p>Provedení venkovních ploch Restyl.</p>
-
     </header>
-
+    <script>
+        const hamburgerButtons = document.querySelectorAll(".hamburger");
+        for (const btn of hamburgerButtons) {
+            btn.onclick = (event) => {
+                const menus = document.querySelectorAll(".hamburger-menu");
+                for (const menu of menus) {
+                    menu.classList.toggle("hamburger-menu--hidden");
+                }
+            }
+        }
+    </script>
+        <h2 class="h2__restyl">Venkovní plochy Restyl</h2>
+        <p>Provedení venkovních ploch Restyl.</p>
     <div class="venkovni_gallery">
-        <img src="media/reference/plochy-restyl/reference-restyl-01.jpeg" alt="a">
-        <img src="media/reference/plochy-restyl/reference-restyl-02.jpeg" alt="b">
-        <img src="media/reference/plochy-restyl/reference-restyl-03.jpeg" alt="c">
-        <img src="media/reference/plochy-restyl/reference-restyl-04.jpeg" alt="d">
+        <img class="img__slu" src="media/reference/plochy-restyl/reference-restyl-02.jpeg" alt="b">
+        <img class="img__slu" src="media/reference/plochy-restyl/reference-restyl-01.jpeg" alt="a">
+        <img class="img__slu" src="media/reference/plochy-restyl/reference-restyl-03.jpeg" alt="c">
+        <img class="img__slu" src="media/reference/plochy-restyl/reference-restyl-04.jpeg" alt="d">
     </div>
 
 
@@ -45,7 +53,9 @@
         <div class="footer__wrap">
             <h3>Plácneme si pro váš projekt?</h3>
             <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-            <button class="footer__button" type="">Zobrazit více</button>
+            <div class="button__center">
+                <button class="footer__button button" type="">Nezávazně poptat</button>
+            </div>
         </div>
     </footer>
 </body>

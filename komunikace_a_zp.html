@@ -11,26 +11,64 @@
 </head>
 
 <body>
-    <header>
-        <menu class="nav__menu">
-            <li class="li__domu"><a href="main.html">DOMŮ</a></li>
-            <li class="li__sluzby"><a href="main.html">SLUŽBY</a></li>
-            <li class="li__reff"><a href="main.html">REFERENCE</a></li>
-            <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
-            <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
-        </menu>
-        <div class="cover__wrap">
-            <img class="background__cover" src="" alt="">
-            <p>Liberecká stavební společnost</p>
+    <header class="header">
+        <div class="navbar__center">
+            <div class="navbar__wrap">
+                <img class="img-responsive" src="media/logo.png" alt="neco">
+                <menu class="nav__menu hamburger-menu hamburger-menu--hidden">
+                    <li class="li__domu"><a href="main.html">DOMŮ</a></li>
+                    <li class="li__sluzby"><a href="#sluzby">SLUŽBY</a></li>
+                    <li class="li__reff"><a href="#reffe">REFERENCE</a></li>
+                    <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
+                    <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
+                </menu>
+                <a class="hamburger" href="javascript:void(0)">menu</a>
+            </div>
+        </div>    
+        <div class="cover__wrap display__none">
         </div>
-
     </header>
+    <script>
+        const hamburgerButtons = document.querySelectorAll(".hamburger");
+        for (const btn of hamburgerButtons) {
+            btn.onclick = (event) => {
+                const menus = document.querySelectorAll(".hamburger-menu");
+                for (const menu of menus) {
+                    menu.classList.toggle("hamburger-menu--hidden");
+                }
+            }
+        }
+    </script>
+    <div class="wrap__kom">
+        <h2>Komunikace a zpevněné plochy</h2>
+        <p>
+            Komunikace a zpevněné plochy provádíme včetně zemních prací, konstrukcí podkladních a souvisejících objektů, jako jsou odvodnění, zpevnění svahů, opěrné zdi atd.
+        </p>
+        <br>
+        <p><strong>Kryt komunikace</strong></p>
+        <ul class="novostavby__seznam">
+            <li>živočišný</li>
+            <li>betonový</li>
+            <li>dlážděný (kámen, betonová dlažba...)</li>
+        </ul>
+        <p>Při realizaci jakékoliv zpevněné plochy dokážeme navrhnout celkovou skladbu konstrukce, s ohledem na její způsob použití a umístění.</p>
+        <ul class="novostavby__seznam">
+            <li>zemní práce</li>
+            <li>podklady pod komunikace</li>
+            <li>komunikace pro pěší i pojezdové</li>
+        </ul>
 
 
-
-    <footer>
-
-    </footer>
+    </div>
+<footer>
+    <div class="footer__wrap">
+        <h3>Plácneme si pro váš projekt?</h3>
+        <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+        <div class="button__center">
+            <button class="footer__button button" type="">Nezávazně poptat</button>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>

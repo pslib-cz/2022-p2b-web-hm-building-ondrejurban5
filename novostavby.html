@@ -11,20 +11,34 @@
 </head>
 
 <body>
-    <header>
-        <menu class="nav__menu">
-            <li class="li__domu"><a href="main.html">DOMŮ</a></li>
-            <li class="li__sluzby"><a href="main.html">SLUŽBY</a></li>
-            <li class="li__reff"><a href="main.html">REFERENCE</a></li>
-            <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
-            <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
-        </menu>
-        <div class="cover__wrap">
-            <img class="background__cover" src="" alt="">
+    <header class="header">
+        <div class="navbar__center">
+            <div class="navbar__wrap">
+                <img class="img-responsive" src="media/logo.png" alt="neco">
+                <menu class="nav__menu hamburger-menu hamburger-menu--hidden">
+                    <li class="li__domu"><a href="main.html">DOMŮ</a></li>
+                    <li class="li__sluzby"><a href="#sluzby">SLUŽBY</a></li>
+                    <li class="li__reff"><a href="#reffe">REFERENCE</a></li>
+                    <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
+                    <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
+                </menu>
+                <a class="hamburger" href="javascript:void(0)">menu</a>
+            </div>
         </div>
-
     </header>
-    <div class="novostavby__body">
+    <script>
+        const hamburgerButtons = document.querySelectorAll(".hamburger");
+        for (const btn of hamburgerButtons) {
+            btn.onclick = (event) => {
+                const menus = document.querySelectorAll(".hamburger-menu");
+                for (const menu of menus) {
+                    menu.classList.toggle("hamburger-menu--hidden");
+                }
+            }
+        }
+    </script>
+
+    <div class="wrap__kom">
         <h2>Novostavby</h2>
         <p>
             Dle požadavků investora jsme schopní dodat kompletní stavbu na klíč, případně zhotovit ucelenou část. Jsme schopni zajistit také projektovou dokumentaci. Provádíme stavby jak průmyslového typu, tak rodinné stavby. Stavba je prováděna dle projektové dokumentace dodané investorem 

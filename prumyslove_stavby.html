@@ -11,38 +11,60 @@
 </head>
 
 <body>
-    <header>
-        <menu class="nav__menu">
-            <li class="li__domu"><a href="main.html">DOMŮ</a></li>
-            <li class="li__sluzby"><a href="main.html">SLUŽBY</a></li>
-            <li class="li__reff"><a href="main.html">REFERENCE</a></li>
-            <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
-            <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
-        </menu>
-        <div class="cover__wrap">
-            <img class="background__cover" src="" alt="">
-            <h2>Průmyslové stavby</h2>
-            <p>Realizujeme průmyslové objekty ocelové konstrukce, lehké ocelové (stanového typu), z prefabrikovaných dílců atd. Vzhledem k tomu, že vlastníme dostatek vlastní mechanizace, stáváme se nezávislými na ostatních subdodávkách a tím se dostáváme na přijatelné ceny.</p>
-            <ul class="neodsazene__li">
-                <li>zemní práce</li>
-                <li>základové konstrukce</li>
-                <li>průmyslové haly</li>
-            </ul>
-            <ul class="odsazene__li">
-                <li>ocelové</li>
-                <li>ŽLB prefabrikované</li>
-                <li>lehké ocelové (tzv. stanového typu)</li>
-            </ul>
+    <header class="header">
+        <div class="navbar__center">
+            <div class="navbar__wrap">
+                <img class="img-responsive" src="media/logo.png" alt="neco">
+                <menu class="nav__menu hamburger-menu hamburger-menu--hidden">
+                    <li class="li__domu"><a href="main.html">DOMŮ</a></li>
+                    <li class="li__sluzby"><a href="#sluzby">SLUŽBY</a></li>
+                    <li class="li__reff"><a href="#reffe">REFERENCE</a></li>
+                    <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
+                    <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
+                </menu>
+                <a class="hamburger" href="javascript:void(0)">menu</a>
+            </div>
         </div>
-        
-
+        <div class="cover__wrap">
+        </div>
     </header>
+    <script>
+        const hamburgerButtons = document.querySelectorAll(".hamburger");
+        for (const btn of hamburgerButtons) {
+            btn.onclick = (event) => {
+                const menus = document.querySelectorAll(".hamburger-menu");
+                for (const menu of menus) {
+                    menu.classList.toggle("hamburger-menu--hidden");
+                }
+            }
+        }
+    </script>
+        <div class="wrap__kom">
+            <div class="ps__seznamy">
+                <h2>Průmyslové stavby</h2>
+                <p>Realizujeme průmyslové objekty ocelové konstrukce, lehké ocelové (stanového typu), z prefabrikovaných dílců atd. Vzhledem k tomu, že vlastníme dostatek vlastní mechanizace, stáváme se nezávislými na ostatních subdodávkách a tím se dostáváme na přijatelné ceny.</p>
+                <ul class="neodsazene__li novostavby__seznam">
+                    <li>zemní práce</li>
+                    <li>základové konstrukce</li>
+                    <li>průmyslové haly</li>
+                </ul>
+                <ul class="odsazene__li novostavby__seznam">
+                    <li>ocelové</li>
+                    <li>ŽLB prefabrikované</li>
+                    <li>lehké ocelové (tzv. stanového typu)</li>
+                </ul>
+            </div>
 
-
-
-    <footer>
-
-    </footer>
+            <footer>
+                <div class="footer__wrap">
+                    <h3>Plácneme si pro váš projekt?</h3>
+                    <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+                    <div class="button__center">
+                        <button class="footer__button button" type="">Nezávazně poptat</button>
+                    </div>
+                </div>
+        </div>
+        </footer>
 </body>
 
 </html>
