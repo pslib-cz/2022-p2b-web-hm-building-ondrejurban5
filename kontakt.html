@@ -14,13 +14,13 @@
     <header class="header header__small">
         <div class="navbar__center">
             <div class="navbar__wrap">
-                <img class="img-responsive" src="media/logo.png" alt="neco">
+                <a href="index.html"><img class="img-responsive" src="media/logo.png" alt="logo"></a>
                 <menu class="nav__menu hamburger-menu hamburger-menu--hidden">
-                    <li class="li__domu"><a href="main.html">DOMŮ</a></li>
-                    <li class="li__sluzby"><a href="#sluzby">SLUŽBY</a></li>
-                    <li class="li__reff"><a href="#reffe">REFERENCE</a></li>
-                    <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
-                    <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
+                    <li><a href="index.html">domů</a></li>
+                    <li><a href="#sluzby">služby</a></li>
+                    <li><a href="#reffe">reference</a></li>
+                    <li><a href="o_nas.html">o nás</a></li>
+                    <li><a href="kontakt.html">kontakt</a></li>
                 </menu>
                 <a class="hamburger" href="javascript:void(0)">menu</a>
             </div>
@@ -43,16 +43,16 @@
         <h2>Kontaktujte nás</h2>
         <p>Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</p>
     </div>
-    </header>
-    <div class="wrap__kom kom--1">
-        <div class="kontakt__wrap">
+
+    <section class="wrap__kom kom--1">
+        <nav class="kontakt__wrap">
             <ul class="kontakt__seznam">
-                <li class="li1">+420 775 550 564</li>
-                <li class="li2">stavby@hm-building.cz</li>
-                <li class="li3">Křižanská 12, Liberec XXII-Horní Suchá</li>
+                <li class="li1"><a class="kontakt__a" href="">+420 775 550 564</a></li>
+                <li class="li2"><a class="kontakt__a" href="">stavby@hm-building.cz</a></li>
+                <li class="li3"><a class="kontakt__a" href="">Křižanská 12, Liberec XXII-Horní Suchá</a></li>
             </ul>
-            <img class="img__slu" src="media/mapa.jpg" alt="pop">
-        </div>
+            <img class="img__slu" src="media/mapa.jpg" alt="mapa_img">
+        </nav>
         <div class="kontakt__formular">
             <h2 class="h2__formular">Nezávazná poptávka služeb</h2>
             <p>Plácneme si pro Váš projekt? Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
@@ -62,13 +62,13 @@
                     <br>
                     <input id="username" type="text" name="username" />
                     <br>
-                    <label for="username">E-mail <span aria-label="required">*</span></label>
+                    <label for="E-mail">E-mail <span aria-label="required">*</span></label>
                     <br>
-                    <input id="username" type="text" name="username" />
+                    <input id="E-mail" type="text" name="E-mail" />
                     <br>
-                    <label for="username">Telefon <span aria-label="required">*</span></label>
+                    <label for="Phone">Telefon <span aria-label="required">*</span></label>
                     <br>
-                    <input id="username" type="text" name="username" />
+                    <input id="Phone" type="text" name="Phone" />
                 </div>
                 <div class="formular__select">
                     <label for="username">Poptávaná služba</label>
@@ -81,26 +81,17 @@
                     </select>
                 </div>
                 <div class="formular__textarea">
-                    <label for="username">Poznámky </label>
+                    <label for="textarea">Poznámky </label>
                     <br>
-                    <textarea id="username" name="username" rows="4" cols="50">
+                    <textarea id="textarea" name="textarea" rows="4" cols="50">
                     </textarea>
                 </div>
-                <button class="orange__button" type="">Odeslat nezávaznou poptávku</button>
+                <a class="orange__button button__hO">Odeslat nezávaznou poptávku</a>
             </div>
         </div>
-    </div>
+    </section>
     <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form -->
 
-    <footer>
-        <div class="footer__wrap">
-            <h3>Plácneme si pro váš projekt?</h3>
-            <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-            <div class="button__center">
-                <button class="footer__button button" type="">Nezávazně poptat</button>
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>

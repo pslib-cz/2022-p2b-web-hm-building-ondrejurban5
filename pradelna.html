@@ -14,13 +14,13 @@
     <header class="header">
         <div class="navbar__center">
             <div class="navbar__wrap">
-                <img class="img-responsive" src="media/logo.png" alt="neco">
+                <a href="index.html"><img class="img-responsive" src="media/logo.png" alt="logo"></a>
                 <menu class="nav__menu hamburger-menu hamburger-menu--hidden">
-                    <li class="li__domu"><a href="main.html">DOMŮ</a></li>
-                    <li class="li__sluzby"><a href="#sluzby">SLUŽBY</a></li>
-                    <li class="li__reff"><a href="#reffe">REFERENCE</a></li>
-                    <li class="li__onas"><a href="o_nas.html">O NÁS</a></li>
-                    <li class="li__kontakt"><a href="kontakt.html">KONTAKT</a></li>
+                    <li><a href="index.html">domů</a></li>
+                    <li><a href="#sluzby">služby</a></li>
+                    <li><a href="#reffe">reference</a></li>
+                    <li><a href="o_nas.html">o nás</a></li>
+                    <li><a href="kontakt.html">kontakt</a></li>
                 </menu>
                 <a class="hamburger" href="javascript:void(0)">menu</a>
             </div>
@@ -40,21 +40,27 @@
         }
     </script>
 
-    <div class="pradelna_gallery">
-        <img class="img__slu" src="media/reference/pradelna/reference-pradelna-01.jpeg" alt="a">
-        <img class="img__slu" src="media/reference/pradelna/reference-pradelna-02.jpeg" alt="b">
-        <img class="img__slu" src="media/reference/pradelna/reference-pradelna-03.jpeg" alt="c">
-        <img class="img__slu" src="media/reference/pradelna/reference-pradelna-04.jpeg" alt="d">
-        <img class="img__slu" src="media/reference/pradelna/reference-pradelna-05.jpeg" alt="e">
-    </div>
+    <section class="rest__wrap">
+        <div class="gal__main">
+            <h2 class="gal__main">Samoobslužná prádelna</h2>
+            <p>Stavební úpravy a opravy v rámci zřízení samoobslužné prádelny v Liberci.</p>
+        </div>
 
+        <div class="pradelna_gallery">
+            <img class="img__slu" src="media/reference/pradelna/reference-pradelna-01.jpeg" alt="gal_image">
+            <img class="img__slu" src="media/reference/pradelna/reference-pradelna-02.jpeg" alt="gal_image">
+            <img class="img__slu" src="media/reference/pradelna/reference-pradelna-03.jpeg" alt="gal_image">
+            <img class="img__slu" src="media/reference/pradelna/reference-pradelna-04.jpeg" alt="gal_image">
+            <img class="img__slu" src="media/reference/pradelna/reference-pradelna-05.jpeg" alt="gal_image">
+        </div>
 
+    </section>
     <footer>
         <div class="footer__wrap">
             <h3>Plácneme si pro váš projekt?</h3>
             <p>Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
             <div class="button__center">
-                <button class="footer__button button" type="">Nezávazně poptat</button>
+                <a href="kontakt.html" class="footer__button button__hW">Nezávazně poptat</a>
             </div>
         </div>
     </footer>

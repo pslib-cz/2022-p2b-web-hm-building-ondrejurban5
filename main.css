@@ -21,6 +21,17 @@ body{
     
 
 }
+
+.h1__cover > span {
+    display: block;
+}
+.gal__main{
+    justify-content: center;
+}
+
+.nav__menu >li a {
+    text-transform: uppercase;
+}
 .navbar__wrap {
     display:flex;
     justify-content: right;
@@ -81,10 +92,14 @@ body{
     height: 53px;
 }
 
-.h1__oend > span{
+.p__oend > span{
     color: #EB6C27;
 }
-
+p > mark {
+    display:inline;
+    background-color: white;
+    font-weight: bolder; /* mark mi vubec nefunguje, nevim co s ním je*/
+}
 .services__wrap {
     margin-left: 1em;
     margin-right: 1em;
@@ -93,6 +108,7 @@ body{
 }
 
 .white__button {
+    display: inline-block;
     border: 2px solid var(--color-orange);
     border-style: dashed;
     color:#EB6C27;
@@ -102,18 +118,25 @@ body{
     background-color: white;
 }
 .orange__button {
+    display: inline-block;
     border: 2px solid var(--color-orange);
     background-color: var(--color-orange);
     color: white;
     font-weight: 400;
     padding: 12px 40px;
     align-items: center;
-    margin-top: 30px;
 
 }
-.h1__22px {
+.rest__wrap {
     display: flex;
-    font-size: 22px;
+    flex-direction: column;
+}
+.rest__wrap > .orange__button{
+    justify-content: center;
+}
+.h2__ref {
+    display: flex;
+    font-size: 1em;
     justify-content: center;
 }
 p {
@@ -143,19 +166,22 @@ p {
     top: 40%;
     margin: 0 1em;
     color: white;
+    font-size: 1.5em;
     font-weight: 600;
 }
 
 .rest__reff{
     margin: 0 1em;
 }
+.venek, .pradelna, .hasic {
+    display: grid;
+    justify-content: center;
+}
 .button__center {
     display: flex;
     justify-content: center;
 }
-.button {
-    margin-bottom: 2em;
-}
+
 .footer__wrap {
     background-color: var(--color-orange);
     display: flex;
@@ -166,15 +192,28 @@ p {
     margin-top: 4em;
     color: white;
 }
+.button__hW, .button__hO {
+    text-decoration: none;
+}
+.button__hO:hover{
+    background-color: #cc4f0b;
+}
+.button__hW:hover{
+    background-color: rgb(196, 192, 192);
+    color: darkorange;
+}
 .footer__button {
+    display: inline-block;
     color: var(--color-orange);
     font-weight: 600;
     padding: 20px 50px;
     gap: 20px;
     border: 2px solid white;
+    background-color: white;
+    text-decoration: none;
 }
 h2 {
-    font-size: 30px;
+    font-size: 2em;
 }
 .novostavby__body > p, h2 {
     margin-left: 1em;
@@ -209,14 +248,23 @@ h2 {
 .odsazene__li {
     margin-left: 2em;
 }
+.kontakt__a {
+    text-decoration: none;
+    color: #EB6C27;
+}
+.kontakt__a:hover {
+    text-decoration: underline;
+    color: #6b2804;
+}
 
 .img-responsive {
     height: 100%;
 }
 .h1__cover {
-    font-size: 25px;
+    font-size: 2em;
     color:white ;
     font-weight: bold;
+    text-align: center;
 }
 .cover__wrap--main {
     display: flex;
@@ -230,6 +278,7 @@ h2 {
     font-size: medium;
 }
 .orange__buttonA {
+    display: inline-block;
     position: absolute;
     z-index: -2;
     border: 2px solid var(--color-orange);
@@ -247,8 +296,7 @@ h2 {
 
 }
 .wrap__kom > p,h2{
-    display: flex;
-    justify-content: left; /* opravit*/
+    text-align: left;
     margin: 1em;
 }
 .formular__input {
@@ -289,6 +337,13 @@ select {
     display: flex;
     align-items: center;
 }
+.img__serv {
+    margin-top: 5em
+}
+.rest__convince {
+    margin-top: 5em;
+}
+
 
 
 
@@ -311,11 +366,16 @@ select {
 @media (min-width: 832px){
 body {
     background-color: white;
-
 }
+.services__wrap, .rest__wrap, .wrap__kom {
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
 .nav__menu a:hover {
     font-weight: bolder;
     background-color: #EB6C27;
+    color: white;
 }
 .nav__menu > li a {
     padding: 1em 0em;
@@ -374,9 +434,10 @@ body {
 
 
 }
-.h1__oend{
+.p__oend{
     display: flex;
     justify-content: center;
+    font-size: 2em;
 }
 .services__main >p{
 text-align: center;
@@ -392,6 +453,10 @@ text-align: center;
     display: grid;
     grid-template-areas: 
     "img unite"
+}
+.rest__convimg {
+    width: 100%;
+    min-height: 310px;
 }
 .services__new > .grid__unite {
     grid-area: unite;
@@ -412,6 +477,16 @@ text-align: center;
 }
 .services__industrial > img {
     grid-area: img;
+}
+
+.img__serv {
+    object-fit: cover;
+    width: 100%;
+    height: 310px;
+}
+.wrap__kom > h2{
+    text-align:center ;
+    margin: 1em;
 }
 .services__reconstruction{
     grid-template-columns: 1fr 1fr;
@@ -499,6 +574,9 @@ text-align: center;
 }
 .h2__restyl {
     display: flex;
+    justify-content: center;
+}
+.h2__refer {
     justify-content: center;
 }
 
